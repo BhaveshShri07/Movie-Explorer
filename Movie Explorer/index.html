@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer - by Bhavesh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="brand" onclick="location.reload()" style="cursor:pointer">
+            <h1>Movie Explorer <span class="author">- by Bhavesh</span></h1>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for movies..." autocomplete="off">
+                <div id="suggestionsBox" class="suggestions-box hidden"></div>
+            </div>
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="homeContent">
+            <section class="movie-section">
+                <h2>Trending Now</h2>
+                <div id="trendingGrid" class="movie-grid"></div>
+            </section>
+
+            <section class="movie-section">
+                <h2>Latest Hollywood</h2>
+                <div id="hollywoodGrid" class="movie-grid"></div>
+            </section>
+
+            <section class="movie-section">
+                <h2>Latest Bollywood</h2>
+                <div id="bollywoodGrid" class="movie-grid"></div>
+            </section>
+        </div>
+
+        <section id="searchResultsSection" class="hidden movie-section">
+            <div class="results-header">
+                <h2>Search Results</h2>
+                <button onclick="location.reload()" class="back-btn">← Back to Home</button>
+            </div>
+            <div id="resultsGrid" class="movie-grid"></div>
+        </section>
+    </main>
+
+    <div id="movieModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
